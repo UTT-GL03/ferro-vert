@@ -1,1 +1,99 @@
-# ferro-vert
+# **GL03** - Réduction de l’impact écologique d’un service numérique de réservation de billet de train : Ferro-Vert 
+
+## Choix du sujet 
+
+Au quotidien, moi et mon collègue Paul prenons le train environ 2 fois par mois, et plus pendant les vacances. Pour réserver ces trains, nous passons par l’application SNCF Connect sur notre téléphone. 
+
+A l’échelle globale en France, 5 millions de personnes prennent le train par jour*, et la majorité de ces passagers utilisent l’application SNCF Connect pour réserver leur billet, le scanner en gare et rester au courant des retards des trains. 
+
+Avec autant d’utilisateurs, l’application se doit d’être la plus neutre en carbone possible. C’est pourquoi nous avons choisi de travailler sur cette application afin de baisser son impact. 
+
+*Source : la SNCF 
+
+## Utilité sociale 
+
+SNCF Connect est aujourd’hui un service incontournable pour prendre le train en France. Grâce au train, les voyages sont accessibles à ceux qui n’ont pas de voiture. Afin de proposer plus d’options de prix et de moyens de transport, l’application propose aussi des bus et du covoiturage. 
+
+Le train remplace la voiture mais aussi l’avion, par exemple pour des trajets comme Paris - Londres, Paris - Bruxelles, vers les grandes capitales d’Europe reliées en train. 
+
+Les utilisateurs peuvent acheter des billets, souscrire à des cartes de réduction, rechercher des itinéraires, s’informer en direct sur leurs trajets. Elle s’utilise à la fois pour les déplacements du quotidien mais aussi pour les voyages et pour les trajets de courte ou longue distance. L’ensemble des éléments sont ainsi dans notre poche, permettant d’y accéder à tout moment. 
+
+Avec la situation actuelle en France, que ce soit écologique ou politique, il est nécessaire de mettre en avant des moyens de transport plus responsables que la voiture et l’avion, comme le train. Avec la hausse du prix du carburant et le réchauffement climatique, il faut orienter et informer les gens sur l’option du train, et rendre le train accessible à tous. 
+
+## Effets de la numérisation 
+
+La numérisation de la réservation de trains et des billets fait que ces derniers ne plus imprimés automatiquement, bien qu’ils restent imprimés parfois par les générations plus âgées sur du papier d’imprimante classique : étant donné que c’est aujourd’hui une minorité des cas, on négligera ce cas. De plus, les billets prenables en gare sont sous forme de ticket de caisse. 
+
+Le bilan en impact écologique de la substitution des billets papiers / tickets par le numérique est difficile à établir. On estime : 
+
+Un billet papier de type ticket de caisse “émet” environ 2g de gaz à effet de serre et 5cl d’eau, tandis qu’un mail avec un billet dématérialisé c’est 5g de gaz à effet de serre et 3cl d’eau (source : La fin du ticket de caisse en papier est-elle vraiment une bonne idée pour <u>la planète ? — Vert ). A cela il faut ajouter l’impact de consultation d’une page Web, assez</u> faible (environ 1g), c’est donc à peu près équivalent. Cependant, si l’utilisateur parcourt de nombreuses pages avant de réserver son train, le numérique peut davantage polluer. 
+
+Aussi, l’application remplace le fait de devoir aller en gare afin d’acheter ses billets, empêchant la pollution de transports, et facilitant la réservation de train. Les gens prennent donc leur billet de moins en moins à la dernière minute et sont plus sereins. Elle permet aussi de faire des économies de papier pour les billets et les cartes. La numérisation permet de désengorger les gares. 
+
+## Scénarios d'usage et impacts 
+
+Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application pour consulter les billets possibles, comme moi et Paul le faisons souvent, pour consulter les horaires et les prix, et dans le second scénario il réserve une option posée précédemment, il paie, et il télécharge son billet 
+
+## Scénario 1: consulter les horaires 
+
+1. L’utilisateur se rend sur la SNCF Connect grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement. 
+
+2. Ensuite il entre sa ville d’arrivée, puis sa ville de départ (il choisit d’y aller mercredi à 10h). Puis il clique sur chercher 
+
+3. Il consulte les horaires disponibles. 
+
+## Scénario 2 : réserver une option posée 
+
+1. L’utilisateur se rend sur la SNCF Connect grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement 
+
+2. Il va dans les options posées 
+
+3. Il choisit le trajet qu’il veut payer 
+
+4. Il procède au paiement 
+
+5. Il télécharge et consulte son billet 
+
+## Impact de l'exécution des scénarios auprès de différents services concurrents 
+
+L’application EcoIndex ne fonctionnant pas sur nos ordinateurs, nous ajouterons les détails lorsque nous pourrons. Pour l’instant nous utilisons l’extension EcoIndex pour déterminer la classe d’une page (de A à G), en fonction du positionnement de cette page parmi lese pages mondiales concernant : 
+
+- le nombre de requêtes lancées, 
+
+- le poids des téléchargements, 
+
+- le nombre d'éléments du document. 
+
+Nous avons choisi de comparer la page d’accueil des services de réservation de trains en France : SNCF Connect, 1 2 Train, Trenitalia, Renfe, RATP, et Transilien, qui est particulier car on peut seulement consulter les horaires et les dernières informations dessus : on ne peut pas réserver. 
+
+|Service|Score|Classe|Détails|
+|---|---|---|---|
+|SNCF Connect|31/100|E|…|
+|1 2 Train|82/100|A|…|
+|Trenitalia|39/100|E|…|
+|Renfe|17/100|F|…|
+|RATP|21/100|F|…|
+|Transilien|16/100|F|…|
+
+
+
+Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France. 
+
+Les mesures de l’impact moyen de ces services montrent des classes d’EcoIndex. 
+
+Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont celles qui incluent : 
+
+- Beaucoup d’images (même optimisées, elles peuvent avoir un impact négatif) 
+
+- Beaucoup de requêtes (pour les traqueurs et les publicités) 
+
+Parmi les services, on remarque “1 2 Train”, qui nous montre qu’il est possible d’améliorer son EcoIndex (A). Même si le site a fait le choix d’être très minime visuellement et dans les fonctionnalités, il reste facile d’utilisation et garde le nécessaire à la réservation de train. Retravailler sur l’utilisation des images permettrait déjà aux autres sites d’améliorer facilement leur EcoIndex. 
+
+## Modèle économique 
+
+Cours du mercredi 7 octobre 
+
+## Maquette de l'interface et échantillon de données 
+
+## Implémentation du scénario prioritaire 
+
