@@ -9,4 +9,6 @@
 |05/10/2026 14:34:41|https://www.sncf-connect.com/|171            |152       |1225         |2.40       |3.60    |30.10   |E   |
 
 La liste des URL dans l'ordre :
-- https://www.sncf-connect.com/
+- https://www.sncf-connect.com/ : page d'accueil. L'utilisateur peut directement faire une recherche d'itinéraire en insérant une destination dans un champs.
+- https://www.sncf-connect.com/home/search/od : page pour ajouter le départ, la date et l'heure.
+- https://www.sncf-connect.com/home/shop/results/outward : page de résultats avec les différents trajets et leur prix.
