@@ -2,13 +2,13 @@
 
 ## Choix du sujet 
 
-Au quotidien, moi et mon collègue Paul prenons le train environ 2 fois par mois, et plus pendant les vacances. Pour réserver ces trains, nous passons par l’application SNCF Connect sur notre téléphone. 
+Au quotidien,nous prenons le train environ 2 fois par mois, et plus pendant les vacances. Pour réserver ces trains, nous passons par l’application SNCF Connect sur notre téléphone. 
 
 A l’échelle globale en France, 5 millions de personnes prennent le train par jour*, et la majorité de ces passagers utilisent l’application SNCF Connect pour réserver leur billet, le scanner en gare et rester au courant des retards des trains. 
 
 Avec autant d’utilisateurs, l’application se doit d’être la plus neutre en carbone possible. C’est pourquoi nous avons choisi de travailler sur cette application afin de baisser son impact. 
 
-*Source : la SNCF 
+*Source : la [SNCF](https://www.sncf-voyageurs.com/fr/decouvrez-notre-entreprise/sncf-voyageurs/nous-comprendre/) 
 
 ## Utilité sociale 
 
@@ -19,6 +19,8 @@ Le train remplace la voiture mais aussi l’avion, par exemple pour des trajets 
 Les utilisateurs peuvent acheter des billets, souscrire à des cartes de réduction, rechercher des itinéraires, s’informer en direct sur leurs trajets. Elle s’utilise à la fois pour les déplacements du quotidien mais aussi pour les voyages et pour les trajets de courte ou longue distance. L’ensemble des éléments sont ainsi dans notre poche, permettant d’y accéder à tout moment. 
 
 Avec la situation actuelle en France, que ce soit écologique ou politique, il est nécessaire de mettre en avant des moyens de transport plus responsables que la voiture et l’avion, comme le train. Avec la hausse du prix du carburant et le réchauffement climatique, il faut orienter et informer les gens sur l’option du train, et rendre le train accessible à tous. 
+
+En France, 55% du réseau ferré est éléctrifié ([source](https://fr.wikipedia.org/wiki/%C3%89lectrification_du_r%C3%A9seau_ferr%C3%A9_en_France)), et le mix énergétique français est décarboné à plus de 95% ([le réseau de Transport d'Electricité](https://www.rte-france.com/actualites/bilan-electrique-2025-conditions-sont-reunies-permettre-france-accelerer-electrification). 
 
 ## Effets de la numérisation 
 
@@ -75,7 +77,7 @@ Nous avons choisi de comparer la page d’accueil des services de réservation d
 |RATP|21/100|F|…|
 |Transilien|16/100|F|…|
 
-
+**rajouter le CSV dans chaque lien, dire qu'il faut enlever les images de manière tranchantes**
 
 Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France. 
 
