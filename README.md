@@ -2,7 +2,7 @@
 
 ## Choix du sujet 
 
-Au quotidien,nous prenons le train environ 2 fois par mois, et plus pendant les vacances. Pour réserver ces trains, nous passons par l’application SNCF Connect sur notre téléphone. 
+Au quotidien, nous prenons le train environ 2 fois par mois, et plus pendant les vacances. Pour réserver ces trains, nous passons par l’application SNCF Connect sur notre téléphone. 
 
 A l’échelle globale en France, 5 millions de personnes prennent le train par jour*, et la majorité de ces passagers utilisent l’application SNCF Connect pour réserver leur billet, le scanner en gare et rester au courant des retards des trains. 
 
@@ -33,7 +33,7 @@ Aussi, l’application remplace le fait de devoir aller en gare afin d’acheter
 
 ## Scénarios d'usage et impacts 
 
-Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application pour consulter les billets possibles, comme moi et Paul le faisons souvent, pour consulter les horaires et les prix, et dans le second scénario il réserve une option posée précédemment, il paie, et il télécharge son billet 
+Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application pour consulter les billets possibles, comme nous le faisons souvent, pour consulter les horaires et les prix, et dans le second scénario il réserve une option posée précédemment, il paie, et il télécharge son billet 
 
 ## Scénario 1: consulter les horaires 
 
@@ -76,8 +76,6 @@ Nous avons choisi de comparer la page d’accueil des services de réservation d
 |RATP|21/100|F|…|
 |Transilien|16/100|F|…|
 
-**rajouter le CSV dans chaque lien, dire qu'il faut enlever les images de manière tranchantes**
-
 Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France. 
 
 Les mesures de l’impact moyen de ces services montrent des classes d’EcoIndex. 
@@ -88,7 +86,7 @@ Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont cell
 
 - Beaucoup de requêtes (pour les traqueurs et les publicités) 
 
-Parmi les services, on remarque “1 2 Train”, qui nous montre qu’il est possible d’améliorer son EcoIndex (A). Même si le site a fait le choix d’être très minime visuellement et dans les fonctionnalités, il reste facile d’utilisation et garde le nécessaire à la réservation de train. Retravailler sur l’utilisation des images permettrait déjà aux autres sites d’améliorer facilement leur EcoIndex. 
+Parmi les services, on remarque “1 2 Train”, qui nous montre qu’il est possible d’améliorer son EcoIndex (A). Même si le site a fait le choix d’être très minime visuellement et dans les fonctionnalités, il reste facile d’utilisation et garde le nécessaire à la réservation de train. Il faut limiter au maximum l'utilisation d'images, et les garder uniquement lorsque c'est vraiment nécessaire : pas seulement mettre des images pour rendre le site visuellement agréable.
 
 ## Modèle économique 
 
