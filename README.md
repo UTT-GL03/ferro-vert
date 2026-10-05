@@ -19,8 +19,7 @@ Le train remplace la voiture mais aussi l’avion, par exemple pour des trajets 
 Les utilisateurs peuvent acheter des billets, souscrire à des cartes de réduction, rechercher des itinéraires, s’informer en direct sur leurs trajets. Elle s’utilise à la fois pour les déplacements du quotidien mais aussi pour les voyages et pour les trajets de courte ou longue distance. L’ensemble des éléments sont ainsi dans notre poche, permettant d’y accéder à tout moment. 
 
 Avec la situation actuelle en France, que ce soit écologique ou politique, il est nécessaire de mettre en avant des moyens de transport plus responsables que la voiture et l’avion, comme le train. Avec la hausse du prix du carburant et le réchauffement climatique, il faut orienter et informer les gens sur l’option du train, et rendre le train accessible à tous. 
-
-En France, 55% du réseau ferré est éléctrifié ([source](https://fr.wikipedia.org/wiki/%C3%89lectrification_du_r%C3%A9seau_ferr%C3%A9_en_France)), et le mix énergétique français est décarboné à plus de 95% ([le réseau de Transport d'Electricité](https://www.rte-france.com/actualites/bilan-electrique-2025-conditions-sont-reunies-permettre-france-accelerer-electrification). 
+En France, 55% du réseau ferré est éléctrifié ([source](https://fr.wikipedia.org/wiki/%C3%89lectrification_du_r%C3%A9seau_ferr%C3%A9_en_France)), et le mix énergétique français est décarboné à plus de 95% ([le réseau de Transport d'Electricité](https://www.rte-france.com/actualites/bilan-electrique-2025-conditions-sont-reunies-permettre-france-accelerer-electrification)). Le train est donc la solution la plus écologique.
 
 ## Effets de la numérisation 
 
