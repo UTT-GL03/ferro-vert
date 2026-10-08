@@ -37,9 +37,9 @@ Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application p
 
 ## Scénario 1: consulter les horaires 
 
-1. L’utilisateur se rend sur la SNCF Connect grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement. 
+1. L’utilisateur se rend sur son application de train préférée grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement. 
 
-2. Ensuite il entre sa ville d’arrivée, puis sa ville de départ (il choisit d’y aller mercredi à 10h). Puis il clique sur chercher 
+2. Ensuite il entre sa ville d’arrivée, puis sa ville de départ (il choisit d’y aller mercredi à 10h). Puis il clique sur chercher.
 
 3. Il consulte les horaires disponibles. 
 
@@ -57,28 +57,28 @@ Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application p
 
 ## Impact de l'exécution des scénarios auprès de différents services concurrents 
 
-L’application EcoIndex ne fonctionnant pas sur nos ordinateurs, nous ajouterons les détails lorsque nous pourrons. Pour l’instant nous utilisons l’extension EcoIndex pour déterminer la classe d’une page (de A à G), en fonction du positionnement de cette page parmi lese pages mondiales concernant : 
+L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www.ecoindex.fr/comment-ca-marche/), [Octo](https://blog.octo.com/sous-le-capot-de-la-mesure-ecoindex), [GreenIT](https://github.com/cnumr/GreenIT-Analysis/blob/acc0334c712ba68939466c42af1514b5f448e19f/script/ecoIndex.js#L19-L44)) en fonction du positionnement de cette page parmi les pages mondiales concernant :
 
-- le nombre de requêtes lancées, 
+- le nombre de requêtes lancées,
+- le poids des téléchargements,
+- le nombre d'éléments du document.
 
-- le poids des téléchargements, 
-
-- le nombre d'éléments du document. 
-
-Nous avons choisi de comparer la page d’accueil des services de réservation de trains en France : SNCF Connect, 1 2 Train, Trenitalia, Renfe, RATP, et Transilien, qui est particulier car on peut seulement consulter les horaires et les dernières informations dessus : on ne peut pas réserver. 
+Nous avons choisi de comparer l'imact du scénario 1 des services de réservation de trains en France : SNCF Connect, 1 2 Train, Trainline, Trenitalia, Renfe, RATP, et Transilien, qui est particulier car on peut seulement consulter les horaires et les dernières informations dessus : on ne peut pas réserver.
+Le scénario 2 était plus compliqué à appliquer pour nous dans la mesure où il faut acheter un billet pour le vérifier. Cependant, le scénario 1 était suffisant pour avoir un avant goût des pratiques à adopter ou à éviter.
 
 |Service|Score|Classe|Détails|
 |---|---|---|---|
-|SNCF Connect|31/100|E|…|
+|SNCF Connect|18,59/100|F|…|
 |1 2 Train|82/100|A|…|
-|Trenitalia|39/100|E|…|
-|Renfe|17/100|F|…|
-|RATP|21/100|F|…|
-|Transilien|16/100|F|…|
+|Trenitalia|20,2/100|F|…|
+|Renfe|18/100|F|…|
+|RATP|23,3/100|F|…|
+|Trainline|24/100|F|…|
+|Transilien|13,03/100|F|…|
 
-Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France. 
+Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France.
 
-Les mesures de l’impact moyen de ces services montrent des classes d’EcoIndex. 
+Les données des sites 12Train, Renfe et Trainline ont été réalisé avec l'outil EcoIndex, tandis que SNCFConnect, Trenitalia, RATP et Transilien ont été réalisé avec le plugin GreenIT Analysis car ces derniers sont protégés (protection antibot).
 
 Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont celles qui incluent : 
 

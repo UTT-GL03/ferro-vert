@@ -1,0 +1,3 @@
+Date;Url;Nombre requêtes;Taille(kb);Taille du dom;GES (gCO2e);Eau (cl);ecoIndex;Note
+09/10/2026 00:07:46;"https://www.transilien.com/fr/itinerary/search?departure=A%C3%A9roport+d%E2%80%99Orly+%28Terminaux+1-2-3%29%2C+Paray-Vieille-Poste+%2891550-94390%29&departureId=stop_area%3AIDFM%3A63284&arrival=A%C3%A9roport+CDG+%28Terminal+2%29+-+TGV%2C+Le+Mesnil-Amelot+%2877990%29&arrivalId=stop_area%3AIDFM%3A73699&dateType=DEPARTURE&date=14%2F10%2F2026&time=10%3A00";249;1665;699;2.37;3.55;31.52;E
+09/10/2026 00:06:20;"https://www.transilien.com/fr";218;6987;1342;2.74;4.11;13.03;F

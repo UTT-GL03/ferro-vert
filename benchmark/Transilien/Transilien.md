@@ -1,4 +1,4 @@
-# Déclaration environnementale du site SNCF Connect
+# Déclaration environnementale du site Transilien
 
 Mesure effectuée le 8 octobre 2026 avec le plugin GreenIT Analysis.
 
@@ -6,9 +6,9 @@ Mesure effectuée le 8 octobre 2026 avec le plugin GreenIT Analysis.
 
 ![Note F](https://raw.githubusercontent.com/cnumr/lighthouse-plugin-ecoindex/598d9d1bf10a90448d815fd0bf50ebdc712c3b0d/assets/Note-F.webp)
 
-* Note EcoIndex : **18,25/100 (F)**
-* Consommation d’eau moyenne rapportée à 1 000 visites : **39,5 litres**, soit environ **4 packs d’eau minérale**.
-* Émission de gaz à effet de serre (GES) moyenne rapportée à 1 000 visites : **2,64 kgCO₂e**, soit environ **13 km parcourus en voiture thermique**.
+* Note EcoIndex : **13,03/100 (F)**
+* Consommation d’eau moyenne rapportée à 1 000 visites : **41,1 litres**, soit environ **4 packs d’eau minérale**.
+* Émission de gaz à effet de serre (GES) moyenne rapportée à 1 000 visites : **2,74 kgCO₂e**, soit environ **14 km parcourus en voiture thermique**.
 
 ## Méthode d’évaluation
 
@@ -30,42 +30,29 @@ L’analyse présentée ici est une photographie réalisée le 8 octobre 2026. L
 
 ### Page d’accueil
 
-URL analysée : <https://www.sncf-connect.com/>
+URL analysée : <https://www.transilien.com/fr>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 18,25/100 | 3,95 cl | 2,64 gCO₂e | 194 | 3 112 Ko | 1 198 éléments |
+| F | 13,03/100 | 4,11 cl | 2,74 gCO₂e | 218 | 6 987 Ko | 1 342 éléments |
 
 Pour 1 000 visites, l’empreinte estimée de cette page représente :
 
-* **39,5 litres d’eau bleue** ;
-* **2,64 kgCO₂e**.
-
-### Page de saisie du trajet
-
-URL analysée : <https://www.sncf-connect.com/home/search/od>
-
-| Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
-|---|---:|---:|---:|---:|---:|---:|
-| E | 25,20/100 | 3,74 cl | 2,50 gCO₂e | 251 | 3 194 Ko | 781 éléments |
-
-Pour 1 000 visites, l’empreinte estimée de cette page représente :
-
-* **37,4 litres d’eau bleue** ;
-* **2,50 kgCO₂e**.
+* **41,1 litres d’eau bleue** ;
+* **2,74 kgCO₂e**.
 
 ### Page de résultats
 
-URL analysée : <https://www.sncf-connect.com/home/shop/results/outward>
+URL analysée : <https://www.transilien.com/fr/itinerary/search?departure=A%C3%A9roport+d%E2%80%99Orly+%28Terminaux+1-2-3%29%2C+Paray-Vieille-Poste+%2891550-94390%29&departureId=stop_area%3AIDFM%3A63284&arrival=A%C3%A9roport+CDG+%28Terminal+2%29+-+TGV%2C+Le+Mesnil-Amelot+%2877990%29&arrivalId=stop_area%3AIDFM%3A73699&dateType=DEPARTURE&date=14%2F10%2F2026&time=10%3A00>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 20,31/100 | 3,89 cl | 2,59 gCO₂e | 201 | 294 Ko | 3 337 éléments |
+| E | 31,52/100 | 3,55 cl | 2,37 gCO₂e | 249 | 1 665 Ko | 699 éléments |
 
 Pour 1 000 visites, l’empreinte estimée de cette page représente :
 
-* **38,9 litres d’eau bleue** ;
-* **2,59 kgCO₂e**.
+* **35,5 litres d’eau bleue** ;
+* **2,37 kgCO₂e**.
 
 ## Évaluation des bonnes pratiques
 
@@ -110,7 +97,7 @@ Le plugin a contrôlé **18 bonnes pratiques**. Les icônes indiquant leur statu
 
 ## Recommandations prioritaires
 
-Pour améliorer en priorité l’EcoIndex de la page d’accueil de SNCF Connect, les actions suivantes peuvent être envisagées :
+Pour améliorer en priorité l’EcoIndex de la page d’accueil de Transilien, les actions suivantes peuvent être envisagées :
 
 1. **Réduire le nombre de requêtes HTTP et de domaines sollicités**, en supprimant les ressources et dépendances tierces non indispensables, puis en regroupant les ressources lorsque cela est pertinent.
 2. **Optimiser les images**, en redimensionnant les sept images concernées avant leur transfert, en supprimant l’image non affichée et en compressant les dix images bitmap signalées. Le plugin estime un gain minimal de 200 Ko pour ces dernières.

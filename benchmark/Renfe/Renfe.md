@@ -1,13 +1,13 @@
-# Déclaration environnementale du site SNCF Connect
+# Déclaration environnementale du site Renfe
 
-Mesure effectuée le 8 octobre 2026 avec le plugin GreenIT Analysis.
+Mesure effectuée le 8 octobre 2026 avec le logiciel EcoIndex.
 
 ## Niveau d’écoconception de la page web
 
 ![Note F](https://raw.githubusercontent.com/cnumr/lighthouse-plugin-ecoindex/598d9d1bf10a90448d815fd0bf50ebdc712c3b0d/assets/Note-F.webp)
 
-* Note EcoIndex : **18,25/100 (F)**
-* Consommation d’eau moyenne rapportée à 1 000 visites : **39,5 litres**, soit environ **4 packs d’eau minérale**.
+* Note EcoIndex : **18/100 (F)**
+* Consommation d’eau moyenne rapportée à 1 000 visites : **39,6 litres**, soit environ **4 packs d’eau minérale**.
 * Émission de gaz à effet de serre (GES) moyenne rapportée à 1 000 visites : **2,64 kgCO₂e**, soit environ **13 km parcourus en voiture thermique**.
 
 ## Méthode d’évaluation
@@ -30,97 +30,77 @@ L’analyse présentée ici est une photographie réalisée le 8 octobre 2026. L
 
 ### Page d’accueil
 
-URL analysée : <https://www.sncf-connect.com/>
+URL analysée : <https://www.renfe.com/es/fr>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 18,25/100 | 3,95 cl | 2,64 gCO₂e | 194 | 3 112 Ko | 1 198 éléments |
+| F | 18/100 | 3,96 cl | 2,64 gCO₂e | 107 | 5,537 Mo | 1 938 éléments |
 
-Pour 1 000 visites, l’empreinte estimée de cette page représente :
+Pour 1 000 visites mensuelles, l’empreinte estimée de cette page représente :
 
-* **39,5 litres d’eau bleue** ;
+* **39,6 litres d’eau bleue** ;
 * **2,64 kgCO₂e**.
-
-### Page de saisie du trajet
-
-URL analysée : <https://www.sncf-connect.com/home/search/od>
-
-| Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
-|---|---:|---:|---:|---:|---:|---:|
-| E | 25,20/100 | 3,74 cl | 2,50 gCO₂e | 251 | 3 194 Ko | 781 éléments |
-
-Pour 1 000 visites, l’empreinte estimée de cette page représente :
-
-* **37,4 litres d’eau bleue** ;
-* **2,50 kgCO₂e**.
 
 ### Page de résultats
 
-URL analysée : <https://www.sncf-connect.com/home/shop/results/outward>
+URL analysée : <https://venta.renfe.com/vol/buscarTrenEnlaces.do?c=_QESA>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 20,31/100 | 3,89 cl | 2,59 gCO₂e | 201 | 294 Ko | 3 337 éléments |
+| E | 29,13/100 | 3,63 cl | 2,42 gCO₂e | 148 | 102 Ko | 1 488 éléments |
 
 Pour 1 000 visites, l’empreinte estimée de cette page représente :
 
-* **38,9 litres d’eau bleue** ;
-* **2,59 kgCO₂e**.
+* **36,3 litres d’eau bleue** ;
+* **2,42 kgCO₂e**.
 
 ## Évaluation des bonnes pratiques
 
-Le plugin a contrôlé **18 bonnes pratiques**. Les icônes indiquant leur statut ne figurent pas dans les données transmises ; la répartition ci-dessous est donc établie à partir des seuils et des résultats textuels fournis.
+Le contrôle complémentaire comporte **14 règles** : **7 sont validées, 1 est à surveiller et 6 sont en échec**.
 
-### Réseau et chargement des ressources
+### Réseau
+
+Sur les dix règles liées au réseau, quatre sont validées, une est à surveiller et cinq sont en échec.
 
 #### Points à améliorer
 
-* **Mise en cache** : 110 ressources sur 123 possèdent des en-têtes de cache. Les 13 ressources restantes devraient également définir des en-têtes `Expires` ou `Cache-Control` adaptés.
-* **Compression des ressources** : 92,2 % des ressources sont compressées, soit un résultat inférieur au seuil de 95 % indiqué par le plugin.
-* **Nombre de domaines** : les ressources sont servies depuis 28 domaines, alors que la bonne pratique recommande d’en utiliser moins de six. Ce nombre élevé multiplie les connexions et peut révéler de nombreuses dépendances tierces.
-* **Code intégré au HTML** : 12 feuilles de styles ou scripts sont intégrés directement dans la page. Leur externalisation peut faciliter leur mise en cache et leur réutilisation.
-* **Nombre de requêtes HTTP** : 198 requêtes sont nécessaires au chargement de la page, pour un seuil recommandé de 40 au maximum.
-* **Minification** : 3 fichiers CSS ou JavaScript sur 91 ne sont pas minifiés.
-* **Cookies sur les ressources statiques** : 87 ressources statiques transmettent un cookie, pour un volume total de 287,1 Ko. Ces cookies augmentent inutilement le volume des requêtes.
-* **Protocole HTTP** : une ressource sur 198 utilise encore HTTP/1. La quasi-totalité des échanges utilise donc un protocole plus récent, mais la dernière ressource pourrait être migrée vers HTTP/2 ou une version ultérieure.
+* **Mise en cache** : 98 ressources statiques sur 100 possèdent des en-têtes de cache. Les deux ressources restantes doivent également définir des en-têtes `Expires` ou `Cache-Control` adaptés.
+* **Compression des fichiers texte** : quatre ressources compressibles sont transférées sans compression. Les fichiers HTML, CSS, JavaScript et SVG concernés devraient être servis avec Brotli ou gzip.
+* **Externalisation du code** : la page contient 41 blocs CSS ou JavaScript intégrés au HTML, dont 37 blocs CSS et 4 blocs JavaScript. Leur mutualisation dans des fichiers externes faciliterait la mise en cache et réduirait les duplications.
+* **Nombre de requêtes HTTP** : 107 requêtes sont nécessaires au chargement de la page, alors que la valeur cible du rapport est de 40.
+* **Polices de caractères** : trois polices sont téléchargées. Ce point est signalé comme étant à surveiller ; des polices système ou un nombre réduit de variantes permettraient de limiter les transferts.
+* **Nombre de domaines** : les ressources proviennent de cinq domaines distincts. Réduire les dépendances à des domaines tiers limiterait les connexions nécessaires.
 
 #### Points conformes
 
 * aucune réponse HTTP en erreur n’a été détectée ;
 * aucune redirection HTTP n’a été détectée ;
-* la page charge au plus sept fichiers CSS, ce qui respecte le seuil maximal de dix ;
-* aucune police de caractères spécifique n’est téléchargée.
-
-### Images et contenus
-
-#### Points à améliorer
-
-* **Redimensionnement dans le navigateur** : sept images sont redimensionnées côté client. Elles devraient être produites directement aux dimensions nécessaires afin d’éviter le transfert de pixels inutiles.
-* **Images inutilisées** : une image est téléchargée sans être affichée dans la page.
-* **Images bitmap** : dix images pourraient être optimisées, pour un gain minimal estimé à 200 Ko.
-
-#### Point conforme
-
-* aucun fichier SVG nécessitant une optimisation n’a été détecté.
+* trois feuilles de styles sont chargées, ce qui respecte le seuil du contrôle ;
+* aucune des 107 requêtes n’utilise HTTP/1 : elles bénéficient toutes d’un protocole plus récent.
 
 ### Appareil utilisateur
 
+Sur les trois règles relatives à l’appareil de l’utilisateur, deux sont validées et une est en échec.
+
 * **Point à améliorer** : aucune feuille de styles dédiée à l’impression n’a été détectée. Une feuille CSS d’impression permettrait de masquer les éléments inutiles et de réduire la consommation de papier et d’encre.
-* **Point conforme** : aucun bouton standard de réseau social n’a été détecté.
+* **Points conformes** : aucun GIF animé ni bouton officiel de partage vers un réseau social n’a été détecté.
+
+### Centre de données
+
+La règle contrôlée pour le centre de données est validée : aucun cookie n’est envoyé avec les ressources statiques.
 
 ## Recommandations prioritaires
 
-Pour améliorer en priorité l’EcoIndex de la page d’accueil de SNCF Connect, les actions suivantes peuvent être envisagées :
+Pour améliorer en priorité l’EcoIndex de cette page, les actions suivantes peuvent être envisagées :
 
-1. **Réduire le nombre de requêtes HTTP et de domaines sollicités**, en supprimant les ressources et dépendances tierces non indispensables, puis en regroupant les ressources lorsque cela est pertinent.
-2. **Optimiser les images**, en redimensionnant les sept images concernées avant leur transfert, en supprimant l’image non affichée et en compressant les dix images bitmap signalées. Le plugin estime un gain minimal de 200 Ko pour ces dernières.
-3. **Réduire le poids et la complexité de la page**, en limitant les contenus chargés par défaut, les composants imbriqués et les fonctionnalités secondaires.
-4. **Compléter la stratégie de cache** pour les 13 ressources qui ne disposent pas encore d’en-têtes adaptés.
-5. **Supprimer les cookies associés aux 87 ressources statiques** afin d’éviter 287,1 Ko de données inutiles dans les échanges.
-6. **Atteindre au moins 95 % de ressources compressées** et minifier les trois fichiers CSS ou JavaScript restants.
-7. **Externaliser les 12 blocs CSS et JavaScript intégrés** lorsque leur mutualisation et leur mise en cache sont pertinentes.
-8. **Servir toutes les ressources avec HTTP/2 ou une version ultérieure**.
-9. **Ajouter une feuille de styles d’impression** qui masque la navigation, les éléments décoratifs et les contenus inutiles sur papier.
+1. **Réduire le poids total de la page**, notamment en redimensionnant et en compressant les images, en utilisant des formats modernes et en supprimant les ressources non indispensables.
+2. **Simplifier la structure du DOM** en limitant les composants imbriqués, les contenus masqués chargés par défaut et les fonctionnalités secondaires.
+3. **Diminuer le nombre de requêtes HTTP** en supprimant les dépendances inutilisées, en regroupant les ressources lorsque cela est pertinent et en différant le chargement des éléments non essentiels.
+4. **Compresser toutes les ressources textuelles** avec Brotli ou gzip.
+5. **Compléter la stratégie de cache** pour les deux ressources statiques qui ne disposent pas d’en-têtes appropriés.
+6. **Réduire et mutualiser les blocs CSS et JavaScript intégrés**, afin de permettre leur mise en cache entre plusieurs pages.
+7. **Limiter les polices téléchargées** au strict nécessaire et privilégier les polices système lorsque l’identité visuelle le permet.
+8. **Ajouter une feuille de styles d’impression** qui masque la navigation, les éléments décoratifs et les contenus inutiles sur papier.
 
 ## L'écoconception
 

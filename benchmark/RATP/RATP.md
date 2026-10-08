@@ -1,14 +1,14 @@
-# Déclaration environnementale du site SNCF Connect
+# Déclaration environnementale du site RATP
 
-Mesure effectuée le 8 octobre 2026 avec le plugin GreenIT Analysis.
+Mesures effectuées les 8 2026 avec le plugin GreenIT Analysis.
 
 ## Niveau d’écoconception de la page web
 
 ![Note F](https://raw.githubusercontent.com/cnumr/lighthouse-plugin-ecoindex/598d9d1bf10a90448d815fd0bf50ebdc712c3b0d/assets/Note-F.webp)
 
-* Note EcoIndex : **18,25/100 (F)**
-* Consommation d’eau moyenne rapportée à 1 000 visites : **39,5 litres**, soit environ **4 packs d’eau minérale**.
-* Émission de gaz à effet de serre (GES) moyenne rapportée à 1 000 visites : **2,64 kgCO₂e**, soit environ **13 km parcourus en voiture thermique**.
+* Note EcoIndex : **23,30/100 (F)**
+* Consommation d’eau moyenne rapportée à 1 000 visites : **38 litres**, soit environ **4 packs d’eau minérale**.
+* Émission de gaz à effet de serre (GES) moyenne rapportée à 1 000 visites : **2,53 kgCO₂e**, soit environ **13 km parcourus en voiture thermique**.
 
 ## Méthode d’évaluation
 
@@ -24,48 +24,37 @@ Ces indicateurs permettent d’établir un score de 0 à 100 et une note de A à
 
 EcoIndex estime également la consommation d’eau bleue et les émissions de gaz à effet de serre associées à l’affichage de la page. Ces valeurs sont des ordres de grandeur calculés à partir de l’EcoIndex de la page ; elles ne constituent pas une mesure physique directe.
 
-L’analyse présentée ici est une photographie réalisée le 8 octobre 2026. Les résultats sont susceptibles d’évoluer selon les contenus affichés et les modifications apportées au site.
+L’analyse présentée ici repose sur des mesures réalisées les 8 octobre 2026. Les résultats sont susceptibles d’évoluer selon les contenus affichés et les modifications apportées au site.
 
 ## Évaluation des pages analysées
 
 ### Page d’accueil
 
-URL analysée : <https://www.sncf-connect.com/>
+URL analysée : <https://www.ratp.fr/>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 18,25/100 | 3,95 cl | 2,64 gCO₂e | 194 | 3 112 Ko | 1 198 éléments |
+| F | 23,30/100 | 3,80 cl | 2,53 gCO₂e | 128 | 2 601 Ko (5 876 Ko) | 1 238 éléments |
 
 Pour 1 000 visites, l’empreinte estimée de cette page représente :
 
-* **39,5 litres d’eau bleue** ;
-* **2,64 kgCO₂e**.
+* **38 litres d’eau bleue** ;
+* **2,53 kgCO₂e**.
 
-### Page de saisie du trajet
-
-URL analysée : <https://www.sncf-connect.com/home/search/od>
-
-| Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
-|---|---:|---:|---:|---:|---:|---:|
-| E | 25,20/100 | 3,74 cl | 2,50 gCO₂e | 251 | 3 194 Ko | 781 éléments |
-
-Pour 1 000 visites, l’empreinte estimée de cette page représente :
-
-* **37,4 litres d’eau bleue** ;
-* **2,50 kgCO₂e**.
+Le plugin fournit deux valeurs pour le poids de la page, **2 601 Ko** et **5 876 Ko entre parenthèses**, sans que les données transmises précisent la signification de cette seconde valeur. Elle est donc conservée telle quelle dans ce rapport, sans interprétation supplémentaire.
 
 ### Page de résultats
 
-URL analysée : <https://www.sncf-connect.com/home/shop/results/outward>
+URL analysée : <https://www.ratp.fr/itineraires/Gare%20de%20Saint-Cloud_%2092210%20Saint-Cloud%26Tour%20Eiffel_%2075007%20Paris>
 
 | Grade | EcoIndex | Eau par visite | GES par visite | Nombre de requêtes | Poids de la page | Taille du DOM |
 |---|---:|---:|---:|---:|---:|---:|
-| F | 20,31/100 | 3,89 cl | 2,59 gCO₂e | 201 | 294 Ko | 3 337 éléments |
+| F | 10,47/100 | 4,19 cl | 2,79 gCO₂e | 198 | 2 796 Ko | 4 125 éléments |
 
 Pour 1 000 visites, l’empreinte estimée de cette page représente :
 
-* **38,9 litres d’eau bleue** ;
-* **2,59 kgCO₂e**.
+* **41,9 litres d’eau bleue** ;
+* **2,79 kgCO₂e**.
 
 ## Évaluation des bonnes pratiques
 
@@ -75,29 +64,29 @@ Le plugin a contrôlé **18 bonnes pratiques**. Les icônes indiquant leur statu
 
 #### Points à améliorer
 
-* **Mise en cache** : 110 ressources sur 123 possèdent des en-têtes de cache. Les 13 ressources restantes devraient également définir des en-têtes `Expires` ou `Cache-Control` adaptés.
-* **Compression des ressources** : 92,2 % des ressources sont compressées, soit un résultat inférieur au seuil de 95 % indiqué par le plugin.
-* **Nombre de domaines** : les ressources sont servies depuis 28 domaines, alors que la bonne pratique recommande d’en utiliser moins de six. Ce nombre élevé multiplie les connexions et peut révéler de nombreuses dépendances tierces.
-* **Code intégré au HTML** : 12 feuilles de styles ou scripts sont intégrés directement dans la page. Leur externalisation peut faciliter leur mise en cache et leur réutilisation.
-* **Nombre de requêtes HTTP** : 198 requêtes sont nécessaires au chargement de la page, pour un seuil recommandé de 40 au maximum.
-* **Minification** : 3 fichiers CSS ou JavaScript sur 91 ne sont pas minifiés.
-* **Cookies sur les ressources statiques** : 87 ressources statiques transmettent un cookie, pour un volume total de 287,1 Ko. Ces cookies augmentent inutilement le volume des requêtes.
-* **Protocole HTTP** : une ressource sur 198 utilise encore HTTP/1. La quasi-totalité des échanges utilise donc un protocole plus récent, mais la dernière ressource pourrait être migrée vers HTTP/2 ou une version ultérieure.
+* **Compression des ressources** : 84 % des ressources sont compressées, soit un résultat inférieur au seuil de 95 % indiqué par le plugin.
+* **Nombre de domaines** : les ressources sont servies depuis 13 domaines, alors que la bonne pratique recommande d’en utiliser moins de six. Ce nombre élevé multiplie les connexions et peut révéler de nombreuses dépendances tierces.
+* **Code intégré au HTML** : 14 feuilles de styles ou scripts sont intégrés directement dans la page. Leur externalisation peut faciliter leur mise en cache et leur réutilisation.
+* **Nombre de requêtes HTTP** : 128 requêtes sont nécessaires au chargement de la page, pour un seuil recommandé de 40 au maximum.
+* **Minification** : 1 fichier CSS ou JavaScript sur 29 n’est pas minifié.
+* **Cookies sur les ressources statiques** : 98 ressources statiques transmettent un cookie, pour un volume total de 239,8 Ko. Ces cookies augmentent inutilement le volume des requêtes.
+* **Redirections** : deux redirections HTTP ont été détectées. Les URL ciblées devraient être appelées directement lorsque cela est possible.
+* **Polices de caractères** : quatre polices spécifiques sont téléchargées. Réduire leur nombre, limiter les variantes ou privilégier des polices système diminuerait les transferts.
 
 #### Points conformes
 
+* les 112 ressources statiques contrôlées possèdent toutes des en-têtes de cache ;
 * aucune réponse HTTP en erreur n’a été détectée ;
-* aucune redirection HTTP n’a été détectée ;
-* la page charge au plus sept fichiers CSS, ce qui respecte le seuil maximal de dix ;
-* aucune police de caractères spécifique n’est téléchargée.
+* les 128 ressources utilisent toutes HTTP/2 ou une version ultérieure ;
+* la page charge huit fichiers CSS, ce qui respecte le seuil maximal de dix.
 
 ### Images et contenus
 
 #### Points à améliorer
 
-* **Redimensionnement dans le navigateur** : sept images sont redimensionnées côté client. Elles devraient être produites directement aux dimensions nécessaires afin d’éviter le transfert de pixels inutiles.
-* **Images inutilisées** : une image est téléchargée sans être affichée dans la page.
-* **Images bitmap** : dix images pourraient être optimisées, pour un gain minimal estimé à 200 Ko.
+* **Redimensionnement dans le navigateur** : huit images sont redimensionnées côté client. Elles devraient être produites directement aux dimensions nécessaires afin d’éviter le transfert de pixels inutiles.
+* **Images inutilisées** : six images sont téléchargées sans être affichées dans la page.
+* **Images bitmap** : une image pourrait être optimisée, pour un gain minimal estimé à 3 Ko.
 
 #### Point conforme
 
@@ -105,22 +94,22 @@ Le plugin a contrôlé **18 bonnes pratiques**. Les icônes indiquant leur statu
 
 ### Appareil utilisateur
 
-* **Point à améliorer** : aucune feuille de styles dédiée à l’impression n’a été détectée. Une feuille CSS d’impression permettrait de masquer les éléments inutiles et de réduire la consommation de papier et d’encre.
-* **Point conforme** : aucun bouton standard de réseau social n’a été détecté.
+* **Point à améliorer** : un bouton standard de réseau social a été détecté. Il devrait être remplacé par un lien de partage léger afin d’éviter le chargement d’un script tiers.
+* **Point conforme** : deux feuilles de styles dédiées à l’impression sont disponibles.
 
 ## Recommandations prioritaires
 
-Pour améliorer en priorité l’EcoIndex de la page d’accueil de SNCF Connect, les actions suivantes peuvent être envisagées :
+Pour améliorer en priorité l’EcoIndex de la page d’accueil de la RATP, les actions suivantes peuvent être envisagées :
 
 1. **Réduire le nombre de requêtes HTTP et de domaines sollicités**, en supprimant les ressources et dépendances tierces non indispensables, puis en regroupant les ressources lorsque cela est pertinent.
-2. **Optimiser les images**, en redimensionnant les sept images concernées avant leur transfert, en supprimant l’image non affichée et en compressant les dix images bitmap signalées. Le plugin estime un gain minimal de 200 Ko pour ces dernières.
+2. **Optimiser les images**, en redimensionnant les huit images concernées avant leur transfert, en supprimant les six images non affichées et en compressant l’image bitmap signalée. Le plugin estime un gain minimal de 3 Ko pour cette dernière.
 3. **Réduire le poids et la complexité de la page**, en limitant les contenus chargés par défaut, les composants imbriqués et les fonctionnalités secondaires.
-4. **Compléter la stratégie de cache** pour les 13 ressources qui ne disposent pas encore d’en-têtes adaptés.
-5. **Supprimer les cookies associés aux 87 ressources statiques** afin d’éviter 287,1 Ko de données inutiles dans les échanges.
-6. **Atteindre au moins 95 % de ressources compressées** et minifier les trois fichiers CSS ou JavaScript restants.
-7. **Externaliser les 12 blocs CSS et JavaScript intégrés** lorsque leur mutualisation et leur mise en cache sont pertinentes.
-8. **Servir toutes les ressources avec HTTP/2 ou une version ultérieure**.
-9. **Ajouter une feuille de styles d’impression** qui masque la navigation, les éléments décoratifs et les contenus inutiles sur papier.
+4. **Porter le taux de ressources compressées de 84 % à au moins 95 %** et minifier le dernier fichier CSS ou JavaScript concerné.
+5. **Supprimer les cookies associés aux 98 ressources statiques** afin d’éviter 239,8 Ko de données inutiles dans les échanges.
+6. **Externaliser les 14 blocs CSS et JavaScript intégrés** lorsque leur mutualisation et leur mise en cache sont pertinentes.
+7. **Supprimer les deux redirections HTTP** en appelant directement les URL de destination lorsque cela est possible.
+8. **Réduire le nombre de polices spécifiques** et ne conserver que les variantes réellement utilisées.
+9. **Remplacer le bouton standard de réseau social** par un lien de partage léger dépourvu de script tiers.
 
 ## L'écoconception
 
