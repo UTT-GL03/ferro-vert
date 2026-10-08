@@ -63,22 +63,22 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www
 - le poids des téléchargements,
 - le nombre d'éléments du document.
 
-Nous avons choisi de comparer l'imact du scénario 1 des services de réservation de trains en France : SNCF Connect, 1 2 Train, Trainline, Trenitalia, Renfe, RATP, et Transilien, qui est particulier car on peut seulement consulter les horaires et les dernières informations dessus : on ne peut pas réserver.
+Nous avons choisi de comparer l'imact du scénario 1 des services de réservation de trains en France : [SNCF Connect](https://www.sncf-connect.com/), [1 2 Train](https://www.12train.com/), [Trainline](https://www.thetrainline.com/fr), [Trenitalia](https://trenitalia.fr/), [Renfe](https://www.renfe.com/es/fr), [RATP](https://www.ratp.fr/), et [Transilien](https://www.transilien.com/fr), qui est particulier car on peut seulement consulter les horaires et les dernières informations dessus : on ne peut pas réserver.
 Le scénario 2 était plus compliqué à appliquer pour nous dans la mesure où il faut acheter un billet pour le vérifier. Cependant, le scénario 1 était suffisant pour avoir un avant goût des pratiques à adopter ou à éviter.
 
 |Service|Score|Classe|Détails|
 |---|---|---|---|
-|SNCF Connect|18,59/100|F|…|
-|1 2 Train|82/100|A|…|
-|Trenitalia|20,2/100|F|…|
-|Renfe|18/100|F|…|
-|RATP|23,3/100|F|…|
-|Trainline|24/100|F|…|
-|Transilien|13,03/100|F|…|
+|SNCF Connect|18,59/100|F|[...](./benchmark/SNCF/SNCFConnect.md)|
+|1 2 Train|82/100|A|[...](./benchmark/12Train/12Train.md)|
+|Trenitalia|20,2/100|F|[...](./benchmark/Trenitalia/Trenitalia.md)|
+|Renfe|18/100|F|[...](./benchmark/Renfe/Renfe.md)|
+|RATP|23,3/100|F|[...](./benchmark/RATP/RATP.md)|
+|Trainline|24/100|F|[...](./benchmark/Trainline/Trainline.md)|
+|Transilien|13,03/100|F|[...](./benchmark/Transilien/Transilien.md)|
 
 Tab 1 : Mesure de l’EcoIndex de la page d’accueil des services de réservation de trains en France.
 
-Les données des sites 12Train, Renfe et Trainline ont été réalisé avec l'outil EcoIndex, tandis que SNCFConnect, Trenitalia, RATP et Transilien ont été réalisé avec le plugin GreenIT Analysis car ces derniers sont protégés (protection antibot).
+Les données des sites 12Train, Renfe et Trainline ont été réalisé avec l'outil EcoIndex. Les sites SNCFConnect, Trenitalia, RATP et Transilien ont été réalisé avec le plugin GreenIT Analysis car ces derniers sont protégés (protection antibot) et étaient inaccessibles pour l'outil.
 
 Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont celles qui incluent : 
 
