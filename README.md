@@ -90,8 +90,11 @@ Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont cell
 Parmi les services, on remarque “1 2 Train”, qui nous montre qu’il est possible d’améliorer son EcoIndex (A). Même si le site a fait le choix d’être très minime visuellement et dans les fonctionnalités, il reste facile d’utilisation et garde le nécessaire à la réservation de train. Il faut limiter au maximum l'utilisation d'images, et les garder uniquement lorsque c'est vraiment nécessaire : pas seulement mettre des images pour rendre le site visuellement agréable.
 
 ## Modèle économique 
+Nous avons choisi le modèle économique de commissions, semblable à la plateforme Trainline. 
+Nous prenons une commission égale à 5% du prix du billet de train.
+Afin d'avoir un employé (payé 3569 euros : le salaire médian pour l'entreprise en 2025), en prenant la moyenne du prix d'un billet (45 euros selon [vacancesmania](https://www.vacancesmania.com/france/quel-est-le-prix-moyen-dun-billet-de-train-en-france/)), il faudrait que nos utilisateurs aient effectué environ 1590 achats sur le site Ferro-Vert en 1 mois, ce qui est atteignable.
 
-Cours du mercredi 7 octobre 
+Nous proposons toutes les compagnies de train qui existent en Europe sur notre site, afin que l'utilisateur puisse avoir le meilleur prix. 
 
 ## Maquette de l'interface et échantillon de données 
 
