@@ -90,11 +90,45 @@ Dans le détail, les pages d’accueil qui ont les plus mauvais scores sont cell
 Parmi les services, on remarque “1 2 Train”, qui nous montre qu’il est possible d’améliorer son EcoIndex (A). Même si le site a fait le choix d’être très minime visuellement et dans les fonctionnalités, il reste facile d’utilisation et garde le nécessaire à la réservation de train. Il faut limiter au maximum l'utilisation d'images, et les garder uniquement lorsque c'est vraiment nécessaire : pas seulement mettre des images pour rendre le site visuellement agréable.
 
 ## Modèle économique 
-Nous avons choisi le modèle économique de commissions, semblable à la plateforme Trainline. 
-Nous prenons une commission égale à 5% du prix du billet de train.
-Afin d'avoir un employé (payé 3569 euros : le salaire médian pour l'entreprise en 2025), en prenant la moyenne du prix d'un billet (45 euros selon [vacancesmania](https://www.vacancesmania.com/france/quel-est-le-prix-moyen-dun-billet-de-train-en-france/)), il faudrait que nos utilisateurs aient effectué environ 1590 achats sur le site Ferro-Vert en 1 mois, ce qui est atteignable.
+Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant le plus d'impact environnemental, la plupart sont directement liés au modèle économique du service. C'est pourquoi il est nécessaire à ce stade d'analyser leur modèle économique et de définir notre propre modèle permettant une conception plus frugale.
 
-Nous proposons toutes les compagnies de train qui existent en Europe sur notre site, afin que l'utilisateur puisse avoir le meilleur prix. 
+|Service|Visiteur anonyme|
+|---|---|
+|SNCF Connect|● Publicités (régie intégrée/ partenariats et régie tierce) ● Ventes de billet|
+|12 Train|- commission versée par SNCF Voyageurs sur chaque billet vendu (6 centimes par billet) - [https://www.linkedin.com/in/jeanbaptistemarie](source)|
+|Trenitalia|● Publicités (régie intégrée) ● Ventes de billet|
+|Renfe|● Ventes de billet|
+|RATP|● Publicités (régie intégrée) ● Ventes de billet|
+|Trainline|● Commissions (5% du prix du billet) ● commission versée par SNCF Voyageurs sur chaque billet vendu (6 centimes par billet)|
+
+Tab. 2 : Offre des services de réservation de train (sans transilien car on ne peut pas réserver dessus).
+
+On voit que la grande majorité des services de réservation de train fonctionnent par la vente de leurs billets, car c’est le site de la compagnie qui gère les trains.
+Il faut donc que nous choisissons si on se positionne comme une entreprise qui gère les trains et son propre site, ou si on se positionne comme un revendeur (qui donc ne récupère pas le prix du billet).
+Il y a seulement Trainline et 12Train qui sont différents : Trainline ajoute une commission de 5% du prix du billet. 12 Train récupère uniquement la commission reversée par SNCF Voyageurs, ce qui fait que le créateur gagne très peu (6 centimes par billet).
+
+|Source possible de revenus|Montant unitaire|Quantité nécessaire pour financer un 1 salaire|
+|---|---|---|
+|Affichage d'une publicité (régie tierce)| 0,00046€|7 758 696|
+|Diffusion d'une publicité (régie intégrée)|10 000€|0,35|
+|Etre le vendeur de billet Commission de SNCF|le prix du billet (45 euros en moyenne, source : [https:// www.vacancesmania.co m/france/quel-est-le-prix- moyen-dun-billet-de-train -en-france/](vacances mania)) 0,06 centimes / billet|59 483 billets vendus par mois|
+|Commission de notre site|5% du billet|1590 billets vendus par mois|
+
+Tab. 3 : Source de revenus possibles pour le service d’une réservation de train
+
+L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associées à un bref état de l'art (cf. Tab.3), nous avons pu établir que :
+
+1. Pour les entreprises qui gèrent les trains et leur propre site (SNCF Connect, Renfe, Trenitalia, RATP), la majorité de leur source de revenue est le prix du billet de train
+2. Pour les revendeurs (Trainline et 12Train), on ne récupère pas le prix du billet mais une faible commission de la part de SNCF Voyageur, ce qui est un petit revenu, donc Trainline prend une commission en plus afin de faire du bénéfice
+3. un modèle par commissions semble adapté à financer les salaires de ceux qui maintiendront la plateforme
+
+Nous avons choisi le modèle économique de commissions, semblable à la plateforme Trainline. 
+
+Nous prenons une commission égale à 5% du prix du billet de train.
+
+Par conséquent, pour réduire l'impact écologique du service, nous proposons de :
+- de renoncer aux publicités gérées par une régie tierce ou intégrée,
+- d'adopter un modèle basé sur les commissions de 5% sur chaque billet (+ la commission donnée par SNCF Voyageurs, qui est plutôt faible),
 
 ## Maquette de l'interface et échantillon de données 
 
