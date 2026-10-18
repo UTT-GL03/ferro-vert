@@ -137,8 +137,8 @@ Les ressources Web possédant une représentation sur notre application seront :
 
 - la page de recherche d'un trajet (avec une HTTP-URI ayant pour chemin `/`)
 - un résultat de recherche avec plusieurs trajets correspondants (avec pour chemin `/{parametresDeRecherche}`).
-- une page de détails avant paiement d'un trajet (avec pour chemin `/{}`).
-- une page pour afficher ses différents billets (avec pour chemin `/{}`).
+- une page de détails avant paiement d'un trajet (avec pour chemin `/{numéroDeTrajet}`).
+- une page pour afficher ses différents billets (avec pour chemin `/{mesBillets}`).
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/f80ad929-d95b-48b9-bc71-31624cbebb67" /> <br>
 __Fig.1__ : Maquette de l'interface du prototype : __a.__ Page d'accueil de recherche<br>
