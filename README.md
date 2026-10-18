@@ -131,6 +131,35 @@ Par conséquent, pour réduire l'impact écologique du service, nous proposons d
 - d'adopter un modèle basé sur les commissions de 5% sur chaque billet (+ la commission donnée par SNCF Voyageurs, qui est plutôt faible),
 
 ## Maquette de l'interface et échantillon de données 
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+Les ressources Web possédant une représentation sur notre application seront :
+
+- la page de recherche d'un trajet (avec une HTTP-URI ayant pour chemin `/`)
+- un résultat de recherche avec plusieurs trajets correspondants (avec pour chemin `/{??????????????????????????????}`).
+- une page de détails avant paiement d'un trajet
+- une page pour afficher ses différents billets
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/f80ad929-d95b-48b9-bc71-31624cbebb67" /> <br>
+__Fig.1__ : Maquette de l'interface du prototype : __a.__ Page d'accueil de recherche<br>
+
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/26b75b68-76d1-490f-9554-d70c0e2478b0" /><br>
+__b.__ Résultats de la recherche, affichage des différents trajets possibles<br>
+
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/853ef1de-39dc-499e-a9e3-209054021a0e" /><br>
+__c.__ Ouverture des détails de la recherche<br>
+
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/89921ea9-4d14-485e-b410-6477b6bfaee7" /><br>
+__d.__ Détails du voyageur et du trajet avant le paiement<br>
+
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/642f4e31-792d-4d7e-8cdf-6c4aa7c382d4" /><br>
+__e.__ Affichage de ses billets<br>
+
+Pour les données utilisées ...
 
 ## Implémentation du scénario prioritaire 
 
