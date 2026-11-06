@@ -1,0 +1,104 @@
+{
+  "tickets": [
+    {
+      "trainStationDeparture": "Paris Gare de Lyon",
+      "trainStationArrival": "Lyon Part-Dieu",
+      "trainType": "TGV",
+      "scheduleDeparture": "2026-12-23 08:00",
+      "scheduleArrival": "2026-12-23 10:00",
+      "class": "2ème",
+      "price": 78,
+      "duration": 2
+    },
+    {
+      "trainStationDeparture": "Paris Montparnasse",
+      "trainStationArrival": "Bordeaux Saint-Jean",
+      "trainType": "TGV",
+      "scheduleDeparture": "2026-12-23 09:00",
+      "scheduleArrival": "2026-12-23 11:15",
+      "class": "1ère",
+      "price": 58,
+      "duration": 2.25
+    },
+    {
+      "trainStationDeparture": "Lyon Part-Dieu",
+      "trainStationArrival": "Grenoble",
+      "trainType": "TER",
+      "scheduleDeparture": "2026-12-23 14:00",
+      "scheduleArrival": "2026-12-23 15:30",
+      "class": "1ère",
+      "price": 22,
+      "duration": 1.5
+    },
+    {
+      "trainStationDeparture": "Paris Bercy",
+      "trainStationArrival": "Clermont-Ferrand",
+      "trainType": "Intercités",
+      "scheduleDeparture": "2026-12-23 18:00",
+      "scheduleArrival": "2026-12-23 21:30",
+      "class": "2ème",
+      "price": 64,
+      "duration": 3.5
+    },
+    {
+      "trainStationDeparture": "Nantes",
+      "trainStationArrival": "Rennes",
+      "trainType": "TER",
+      "scheduleDeparture": "2026-12-23 11:30",
+      "scheduleArrival": "2026-12-23 13:00",
+      "class": "2ème",
+      "price": 26,
+      "duration": 1.5
+    },
+    {
+      "trainStationDeparture": "Paris Gare de Lyon",
+      "trainStationArrival": "Lyon Part-Dieu",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-03-26 08:00",
+      "scheduleArrival": "2027-03-26 10:00",
+      "class": "2ème",
+      "price": 48,
+      "duration": 2
+    },
+    {
+      "trainStationDeparture": "Paris Montparnasse",
+      "trainStationArrival": "Bordeaux Saint-Jean",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-03-26 09:00",
+      "scheduleArrival": "2027-03-26 11:15",
+      "class": "2ème",
+      "price": 49,
+      "duration": 2.25
+    },
+    {
+      "trainStationDeparture": "Lyon Part-Dieu",
+      "trainStationArrival": "Grenoble",
+      "trainType": "TER",
+      "scheduleDeparture": "2027-03-26 14:00",
+      "scheduleArrival": "2027-03-26 15:30",
+      "class": "1ère",
+      "price": 18,
+      "duration": 1.5
+    },
+    {
+      "trainStationDeparture": "Paris Bercy",
+      "trainStationArrival": "Clermont-Ferrand",
+      "trainType": "Intercités",
+      "scheduleDeparture": "2027-03-26 18:00",
+      "scheduleArrival": "2027-03-26 21:30",
+      "class": "1ère",
+      "price": 40,
+      "duration": 3.5
+    },
+    {
+      "trainStationDeparture": "Nantes",
+      "trainStationArrival": "Rennes",
+      "trainType": "TER",
+      "scheduleDeparture": "2027-03-26 11:30",
+      "scheduleArrival": "2027-03-26 13:00",
+      "class": "1ère",
+      "price": 20,
+      "duration": 1.5
+    }
+  ]
+}
