@@ -1,17 +1,20 @@
-import data from './assets/data/sample_data.json'
-import TicketItem from './components/TicketItem'
+import { BrowserRouter, Routes, Route } from 'react-router'
+
+import HomePage from './pages/HomePage'
+import TicketPage from './pages/TicketPage'
 
 function App() {
 
   return (
-    <main>
-      <h1>Ferro-Vert</h1>
-      <ul className="tickets">
-        {data.tickets.map((ticket, index) => (
-          <TicketItem key={index} ticket={ticket} />
-        ))}
-      </ul>
-    </main>
+    <BrowserRouter>
+      <header>
+        <h1>Ferro-Vert</h1>
+      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/ticket/:id" element={<TicketPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

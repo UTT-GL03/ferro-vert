@@ -1,40 +1,36 @@
 {{#*inline "ticket"}}
+{{#with (date '2026-11-07' '2028-11-07' 'YYYY-MM-DD') as |travelDate|}}
 {
-"trainStationDeparture": "{{trainStationDeparture}}",
-"trainStationArrival": "{{trainStationArrival}}",
+"id": {{../id}},
+"trainStationDeparture": "{{../trainStationDeparture}}",
+"trainStationArrival": "{{../trainStationArrival}}",
 "trainType": "{{random 'TGV' 'TER' 'Intercités' 'Eurostar' 'ICE'}}",
-"scheduleDeparture": "{{travelDate}} {{departureTime}}",
-"scheduleArrival": "{{travelDate}} {{arrivalTime}}",
+"scheduleDeparture": "{{travelDate}} {{../departureTime}}",
+"scheduleArrival": "{{travelDate}} {{../arrivalTime}}",
 "class": "{{random '1ère' '2ème'}}",
-"price": {{int minPrice maxPrice '0'}},
-"duration": {{duration}}
+"price": {{int 0 100}},
+"duration": {{../duration}}
 }
+{{/with}}
 {{/inline}}
 {
 "tickets": [
 {{#repeat 2}}
-{{#with (date '2026-11-07' '2027-10-08' 'YYYY-MM-DD') as |travelDate|}}
-{{> ticket travelDate=travelDate
+{{> ticket id=(add (step 5) 1)
 trainStationDeparture='Paris Gare de Lyon' trainStationArrival='Lyon Part-Dieu'
-trainType=trainType departureTime='08:00' arrivalTime='10:00'
-minPrice=35 maxPrice=95 duration=2}},
-{{> ticket travelDate=travelDate
+departureTime='08:00' arrivalTime='10:00' duration=2}},
+{{> ticket id=(add (step 5) 2)
 trainStationDeparture='Paris Montparnasse' trainStationArrival='Bordeaux Saint-Jean'
-trainType=trainType departureTime='09:00' arrivalTime='11:15'
-minPrice=39 maxPrice=99 duration=2.25}},
-{{> ticket travelDate=travelDate
+departureTime='09:00' arrivalTime='11:15' duration=2.25}},
+{{> ticket id=(add (step 5) 3)
 trainStationDeparture='Lyon Part-Dieu' trainStationArrival='Grenoble'
-trainType=trainType departureTime='14:00' arrivalTime='15:30'
-minPrice=18 maxPrice=35 duration=1.5}},
-{{> ticket travelDate=travelDate
+departureTime='14:00' arrivalTime='15:30' duration=1.5}},
+{{> ticket id=(add (step 5) 4)
 trainStationDeparture='Paris Bercy' trainStationArrival='Clermont-Ferrand'
-trainType=trainType departureTime='18:00' arrivalTime='21:30'
-minPrice=25 maxPrice=75 duration=3.5}},
-{{> ticket travelDate=travelDate
+departureTime='18:00' arrivalTime='21:30' duration=3.5}},
+{{> ticket id=(add (step 5) 5)
 trainStationDeparture='Nantes' trainStationArrival='Rennes'
-trainType=trainType departureTime='11:30' arrivalTime='13:00'
-minPrice=15 maxPrice=30 duration=1.5}}
-{{/with}}
+departureTime='11:30' arrivalTime='13:00' duration=1.5}}
 {{/repeat}}
 ]
 }
