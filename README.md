@@ -159,7 +159,99 @@ __d.__ Détails du voyageur et du trajet avant le paiement<br>
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/642f4e31-792d-4d7e-8cdf-6c4aa7c382d4" /><br>
 __e.__ Affichage de ses billets<br>
 
-Pour les données utilisées ...
+Pour les données utilisées, nous avons utilisé le modèle ci-dessous. Nous en avons généré 10, et avons veillé à ce que l'arrivée soit bien après le départ. Nous avons essayé de créer des données avec une structure similaire à celle utilisée par les services concurrents : gare de départ, gare d'arrivée, type de train, jour et heure de départ et d'arrivée, prix, durée, classes disponibles.
+
+```
+{{#*inline "ticket"}}
+{
+"trainStationDeparture": "{{trainStationDeparture}}",
+"trainStationArrival": "{{trainStationArrival}}",
+"trainType": "{{random 'TGV' 'TER' 'Intercités' 'Eurostar' 'ICE'}}",
+"scheduleDeparture": "{{travelDate}} {{departureTime}}",
+"scheduleArrival": "{{travelDate}} {{arrivalTime}}",
+"class": "{{random '1ère' '2ème'}}",
+"price": {{int minPrice maxPrice '0'}},
+"duration": {{duration}}
+}
+{{/inline}}
+{
+"tickets": [
+{{#repeat 2}}
+{{#with (date '2026-11-07' '2027-10-08' 'YYYY-MM-DD') as |travelDate|}}
+{{> ticket travelDate=travelDate
+trainStationDeparture='Paris Gare de Lyon' trainStationArrival='Lyon Part-Dieu'
+trainType=trainType departureTime='08:00' arrivalTime='10:00'
+minPrice=35 maxPrice=95 duration=2}},
+{{> ticket travelDate=travelDate
+trainStationDeparture='Paris Montparnasse' trainStationArrival='Bordeaux Saint-Jean'
+trainType=trainType departureTime='09:00' arrivalTime='11:15'
+minPrice=39 maxPrice=99 duration=2.25}},
+{{> ticket travelDate=travelDate
+trainStationDeparture='Lyon Part-Dieu' trainStationArrival='Grenoble'
+trainType=trainType departureTime='14:00' arrivalTime='15:30'
+minPrice=18 maxPrice=35 duration=1.5}},
+{{> ticket travelDate=travelDate
+trainStationDeparture='Paris Bercy' trainStationArrival='Clermont-Ferrand'
+trainType=trainType departureTime='18:00' arrivalTime='21:30'
+minPrice=25 maxPrice=75 duration=3.5}},
+{{> ticket travelDate=travelDate
+trainStationDeparture='Nantes' trainStationArrival='Rennes'
+trainType=trainType departureTime='11:30' arrivalTime='13:00'
+minPrice=15 maxPrice=30 duration=1.5}}
+{{/with}}
+{{/repeat}}
+]
+}
+```
 
 ## Implémentation du scénario prioritaire 
+### Etape de prototypage : Données chargées de manière statique
+Pour cette première version du prototype (v1.0.0) :
 
+- L'échantillon de données est encore chargé dans le code de manière statique
+- Nous avons uniquement implémenté la visualisation des résultats d'une recherche, et la visualisation des détails d'un ticket
+- Nous n'avons pas implémenté encore la recherche d'un ticket avec les différents champs (date, heure, départ et destination) : étant débutants, nous prenons d'abord en main React, et nous implémenterons la recherche dans un second temps
+- Ce scénario nécessite de pouvoir naviguer entre deux types de page : la page de résultats de la recherche et la page de visualisation d'un ticket
+
+### Page de résultats de recherche
+Nous avons développé la page de résultats de recherche (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
+
+![home_screen](README_Images/home_screen_v1.0.0.png)
+Fig.2 : Prototype de la page de résultats de recherche
+
+Pour l'instant, nous avons choisi un framework de mise en page minimaliste (PicoCSS). Dans la suite du projet, nous verrons si l'impact environnemental du passage à un framework de mise en page plus puissant (comme Bootstrap) est possible, et si nous en trouvons le besoin.
+
+Nous avons ajouté la bibliothèque DayJS afin d'afficher les trains ayant lieu le lendemain différement (il est marqué "Demain" au lieu de la date pour être plus lisible).
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend. Il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du framework (React, PicoCSS, DayJS). 
+
+<!--Cette évaluation de l'impact (cf. Tab.4) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production". --> 
+
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| Mode "développement"  | 89 A 🟩 |  1.2 | 87 | 25 | 2 (5605)
+| Mode "pré-production" | 88 A 🟦 | 1,2 | 190 | 4 | 125
+
+Tab. 4 : Evaluation de l'impact du prototype de la page d'accueil
+
+# Page des détails d'un ticket
+Les pages des articles ont pour HTTP-URI /{id}. L'échantillon de données donne un id pour chaque ticket proposé.
+
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette. 
+
+![home_screen](README_Images/ticket_details_v1.0.0.png)
+Fig. 3 : Prototype de la page de détails d'un ticket
+
+Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux pages, il devient possible d'exécuter le scénario prioritaire (hors recherche) et de mesurer son impact.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 0. Page d'accueil et lancement d'une recherche (pas implémenté)	   |  |  |  |  | 
+| 2. Visualisation des trains possibles		   | 89 A 🟩 |  1.2 | 87 | 25 | 2 (5605)
+| 3. Choix d'un train et visualisation des détails	| 93 A 🟩 | 1,1 | 26 | 25 | 2 (5605)
+Tab. 5 : Evaluation de l'impact du scénario "Consulter les horaires" dans le prototype v1.0.0 (en mode développement).
+
+Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents vues précédemment.
+
+<!--Si nous arrivons à maintenir les émissions en dessous de ... g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ ... fois moins impactante que les sites comme SNCF, ..., et ... moins impactant que 12 Train. -->
