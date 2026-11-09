@@ -1,0 +1,114 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "trainStationDeparture": "Paris Gare de Lyon",
+      "trainStationArrival": "Lyon Part-Dieu",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-11-02 08:00",
+      "scheduleArrival": "2027-11-02 10:00",
+      "class": "1ère",
+      "price": 14,
+      "duration": 2
+    },
+    {
+      "id": 2,
+      "trainStationDeparture": "Paris Montparnasse",
+      "trainStationArrival": "Bordeaux Saint-Jean",
+      "trainType": "TER",
+      "scheduleDeparture": "2027-01-01 09:00",
+      "scheduleArrival": "2027-01-01 11:15",
+      "class": "2ème",
+      "price": 86,
+      "duration": 2.25
+    },
+    {
+      "id": 3,
+      "trainStationDeparture": "Lyon Part-Dieu",
+      "trainStationArrival": "Grenoble",
+      "trainType": "ICE",
+      "scheduleDeparture": "2028-01-08 14:00",
+      "scheduleArrival": "2028-01-08 15:30",
+      "class": "2ème",
+      "price": 39,
+      "duration": 1.5
+    },
+    {
+      "id": 4,
+      "trainStationDeparture": "Paris Bercy",
+      "trainStationArrival": "Clermont-Ferrand",
+      "trainType": "Eurostar",
+      "scheduleDeparture": "2028-10-01 18:00",
+      "scheduleArrival": "2028-10-01 21:30",
+      "class": "1ère",
+      "price": 85,
+      "duration": 3.5
+    },
+    {
+      "id": 5,
+      "trainStationDeparture": "Nantes",
+      "trainStationArrival": "Rennes",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-10-04 11:30",
+      "scheduleArrival": "2027-10-04 13:00",
+      "class": "1ère",
+      "price": 10,
+      "duration": 1.5
+    },
+    {
+      "id": 6,
+      "trainStationDeparture": "Paris Gare de Lyon",
+      "trainStationArrival": "Lyon Part-Dieu",
+      "trainType": "Eurostar",
+      "scheduleDeparture": "2028-10-25 08:00",
+      "scheduleArrival": "2028-10-25 10:00",
+      "class": "2ème",
+      "price": 85,
+      "duration": 2
+    },
+    {
+      "id": 7,
+      "trainStationDeparture": "Paris Montparnasse",
+      "trainStationArrival": "Bordeaux Saint-Jean",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-12-30 09:00",
+      "scheduleArrival": "2027-12-30 11:15",
+      "class": "2ème",
+      "price": 67,
+      "duration": 2.25
+    },
+    {
+      "id": 8,
+      "trainStationDeparture": "Lyon Part-Dieu",
+      "trainStationArrival": "Grenoble",
+      "trainType": "TGV",
+      "scheduleDeparture": "2028-06-07 14:00",
+      "scheduleArrival": "2028-06-07 15:30",
+      "class": "2ème",
+      "price": 72,
+      "duration": 1.5
+    },
+    {
+      "id": 9,
+      "trainStationDeparture": "Paris Bercy",
+      "trainStationArrival": "Clermont-Ferrand",
+      "trainType": "Intercités",
+      "scheduleDeparture": "2027-07-17 18:00",
+      "scheduleArrival": "2027-07-17 21:30",
+      "class": "2ème",
+      "price": 14,
+      "duration": 3.5
+    },
+    {
+      "id": 10,
+      "trainStationDeparture": "Nantes",
+      "trainStationArrival": "Rennes",
+      "trainType": "TGV",
+      "scheduleDeparture": "2027-12-03 11:30",
+      "scheduleArrival": "2027-12-03 13:00",
+      "class": "1ère",
+      "price": 31,
+      "duration": 1.5
+    }
+  ]
+}
