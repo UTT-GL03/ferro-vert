@@ -256,3 +256,9 @@ Tab. 5 : Evaluation de l'impact du scénario "Consulter les horaires" dans le pr
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents vues précédemment.
 
 Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ 2 fois moins impactante que les sites comme SNCF et Trenitalia, et similaire à 12 Train (actuellement nous sommes à 0,2 g de moins que 12 Train).
+
+## Étape de prototypage : Données statiques chargées de manière dynamique
+
+Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
+
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.4), les résultats sont similaires : on a encore un score de 89.
