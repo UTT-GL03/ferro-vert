@@ -225,13 +225,13 @@ Nous avons ajouté la bibliothèque DayJS afin d'afficher les trains ayant lieu 
 
 Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend. Il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du framework (React, PicoCSS, DayJS). 
 
-<!--Cette évaluation de l'impact (cf. Tab.4) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production". --> 
+Cette évaluation de l'impact (cf. Tab.4) est déjà encourageante en mode "développement", et un plus en mode "pré-production".
 
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
 | Mode "développement"  | 89 A 🟩 |  1.2 | 87 | 25 | 2 (5605)
-| Mode "pré-production" | 88 A 🟦 | 1,2 | 190 | 4 | 125
+| Mode "pré-production" | 92 A 🟩 | 1,2 | 84 | 4 | 1
 
 Tab. 4 : Evaluation de l'impact du prototype de la page d'accueil
 
@@ -248,10 +248,11 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
 | 0. Page d'accueil et lancement d'une recherche (pas implémenté)	   |  |  |  |  | 
-| 2. Visualisation des trains possibles		   | 89 A 🟩 |  1.2 | 87 | 25 | 2 (5605)
+| 2. Visualisation des trains possibles		   | 89 A 🟩 |  1,2 | 87 | 25 | 2 (5605)
 | 3. Choix d'un train et visualisation des détails	| 93 A 🟩 | 1,1 | 26 | 25 | 2 (5605)
+
 Tab. 5 : Evaluation de l'impact du scénario "Consulter les horaires" dans le prototype v1.0.0 (en mode développement).
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents vues précédemment.
 
-<!--Si nous arrivons à maintenir les émissions en dessous de ... g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ ... fois moins impactante que les sites comme SNCF, ..., et ... moins impactant que 12 Train. -->
+Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ 2 fois moins impactante que les sites comme SNCF et Trenitalia, et similaire à 12 Train (actuellement nous sommes à 0,2 g de moins que 12 Train).
