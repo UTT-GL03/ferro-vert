@@ -5,7 +5,7 @@
       type: scroll
     - name: Choisir un billet
       type: click
-      element: .tickets:nth-child(1) > a
+      element: ul.tickets > .ticket:nth-child(3) > a
       pageChange: true
       waitForSelector: article > h2
     - name: Consulter le billet
