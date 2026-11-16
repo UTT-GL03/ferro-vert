@@ -43,6 +43,10 @@ Nous faisons l’hypothèse que l’utilisateur ouvre une fois l’application p
 
 3. Il consulte les horaires disponibles. 
 
+4. Il consulte les détails d'un billet.
+
+5. Il revient en arrière. 
+
 ## Scénario 2 : réserver une option posée 
 
 1. L’utilisateur se rend sur la SNCF Connect grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement 
