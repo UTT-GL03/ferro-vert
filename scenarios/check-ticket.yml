@@ -1,0 +1,17 @@
+- name: Consulter les billets
+  url: http://localhost/
+  actions:
+    - name: Consulter les billets
+      type: scroll
+    - name: Choisir un billet
+      type: click
+      element: .tickets:nth-child(1) > a
+      pageChange: true
+      waitForSelector: article > h2
+    - name: Consulter le billet
+      type: scroll
+    - name: Retourner aux billets
+      type: click
+      element: main > a
+      pageChange: true
+      waitForSelector: .tickets
