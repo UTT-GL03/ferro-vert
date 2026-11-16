@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <h1>Ferro-Vert toto</h1>
+        <h1>Ferro-Vert</h1>
       </header>
       <Routes>
         <Route path="/" element={<HomePage />} />
