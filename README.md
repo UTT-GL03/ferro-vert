@@ -255,7 +255,7 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 | 2. Visualisation des trains possibles		   | 89 A 🟩 |  1,2 | 87 | 25 | 2 (5605)
 | 3. Choix d'un train et visualisation des détails	| 93 A 🟩 | 1,1 | 26 | 25 | 2 (5605)
 
-Tab. 5 : Evaluation de l'impact du scénario "Consulter les horaires" dans le prototype v1.0.0 (en mode développement).
+__Tab. 5__ : Evaluation de l'impact du scénario "Consulter les horaires" dans le prototype v1.0.0 (en mode développement).
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents vues précédemment.
 
@@ -266,3 +266,20 @@ Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour n
 Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
 
 Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.4), les résultats sont similaires : on a encore un score de 89.
+
+### Évolution de l'EcoIndex lors du passage à l'échelle
+
+Produites désormais de manière automatique lors de l'intégration continue, les mesures nécessaires à la production de l'EcoIndex, ``` [avant](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19211909192/artifacts/4512754147) et [après](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19224015758/artifacts/4516341581) ``` la simulation du passage à l'échelle retraduisent bien (cf. Tab.6) l'augmentation du poids des téléchargements, mais aussi de l'augmentation du nombre d'éléments de la page des billets.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les billets |<del>89 A 🟩 </del><br/>61 C | <del>1,2</del><br/>1,78 | <del>87</del><br/>714 | 6 | <del>2 (5605)</del><br/>391.03
+| 2. Choisir un billet | <del>93 A 🟩</del><br/>92 A | <del>1,1</del><br/>1,16 | 26 | 25 | <del>2 (5605)</del><br/>26.159
+| 3. Retourner aux billets	|<del>89 A 🟩 </del><br/>61 C | <del>1,2</del><br/>1,78 | <del>87</del><br/>714 | 6 | <del>2 (5605)</del><br/>391
+
+__Tab.6__: Effet du passage à l'échelle sur l'impact du scénario "Consulter les horaires" dans le prototype v1.0.1.
+
+On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page des résultats d'une recherche que pour la page des détails d'un billet.
+Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente avec le nombre d'éléments de la page.
+Pour évaluer plus précisément l'impact de la consultation elle-même nous utiliserons un autre outil de mesure : GreenFrame.
+A l'avenir, nous allons également rajouter une pagination des billets de train, car pour l'instant nous en affichons beaucoup plus que nécessaire.
